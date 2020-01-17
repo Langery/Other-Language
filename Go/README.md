@@ -7,6 +7,10 @@
   go build xxx.go
 ```
 
+> Link
+
+1. [Go语言入门教程](http://c.biancheng.net/golang/)
+
 ### 数据类型
 
 1. Boolean
