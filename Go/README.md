@@ -10,7 +10,10 @@
 ### 数据类型
 
 1. Boolean
-2. 数字类型 int / float32 / float64
+2. 数字类型 string int / float32 / float64
+    - 整数
+    - 浮点数
+    - 复数
 3. 字符串
 4. 派生类型
     - 指针类型（Pointer）
