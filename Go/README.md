@@ -29,3 +29,20 @@
     - 接口类型（interface）
     - Map 类型
 
+### 笔记
+
+1. iota 常量生成器
+``` go
+type Weekday int
+
+const (
+  Sunday Weekday = iota // 0
+  Monday // 1
+  Tuesday // 2
+  Wednesday //3
+  Thursday // ...
+  Friday
+  Saturday
+)
+```
+
