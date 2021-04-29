@@ -1,15 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct node
+typedef int ElemType; // 定义 ElemType
+#define MaxSize 0
+typedef struct
 {
   /* data */
-  int elem;
-  struct node *next;
-}DataNode;
+  ElemType data[MaxSize];
+  int length;
+}SqList;
+
+void fun(){
+  int a = 5;
+  int *p = &a;
+  printf("a is %d\n", a);
+  printf("&a is %d\n", &a);
+  printf("*p is %d\n", *p);
+}
+
+void add(int a, int b){
+  int addnum = a+b;
+  printf("addnum is %d\n", addnum);
+}
 
 int main(){
-  DataNode data;
-  printf("DataNode is %d", data);
+  SqList SqList;
+  fun();
+  add(1, 5);
+  printf("SqList %lu", sizeof(SqList));
 }
 
