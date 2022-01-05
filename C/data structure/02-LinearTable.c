@@ -12,6 +12,10 @@ typedef struct
 }SqList;
 
 void fun(){
+  /*
+    & 取地址符
+    * 间接运算符
+  */
   int a = 5;
   int *p = &a;
   printf("a is %d\n", a);
@@ -27,6 +31,6 @@ void add(int a, int b){
 int main(){
   SqList SqList;
   printf("SqList %lu\n", sizeof(SqList));
-  // fun();
+  fun();
   // add(1, 5);
 }
