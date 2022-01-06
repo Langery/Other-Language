@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int x;
+int x; // 全局声明
 int y;
 int addtwonum (){
   extern int x;
