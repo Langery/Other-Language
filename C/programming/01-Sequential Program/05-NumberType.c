@@ -10,6 +10,12 @@ int main(){
   printf("%-25.15f,%25.15f\n", b,b);
 
   printf("%e", 123.456);
-  printf("%13.2e", 123.456);
+  printf("%13.2e\n", 123.456);
+
+  int c = -1;
+  printf("%d\t%o\n", c, c);
+  printf("%d\t%o\t%x\n", c, c, c);
+
+  printf("%f%%\n", 1.0/3);
   return 0;
 }
