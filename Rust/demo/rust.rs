@@ -1,6 +1,6 @@
-struct SumInput {
+// struct SumInput {
   
-}
+// }
 
 fn my_print(){
   println!("hello world!");
