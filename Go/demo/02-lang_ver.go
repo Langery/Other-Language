@@ -1,7 +1,7 @@
 package main
 import "fmt"
 
-func main () {
+func main(){
 	var a string = "Tom"
 	fmt.Println(a)
 
