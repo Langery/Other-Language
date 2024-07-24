@@ -1,5 +1,5 @@
 use actix::Actor;
-use actix_web::{App, HttpResponse, HttpServer, get, HttpRequest, web};//HttpRequest, web
+use actix_web::{App, HttpResponse, HttpServer, get};//HttpRequest, web
 use actix_web_actors::ws::{WebsocketContext};
 
 // create a object
@@ -20,25 +20,28 @@ impl Actor for WsConn {
     }
 }
 
-// Tip 2
-#[get("/ws")]
-async fn index(req: HttpRequest, stream: web::Payload,) -> HttpResponse {
-    let conn = WsConn {
-        nick: "Langery".into()
-    };
-    let resp = actix_web_actors::ws::start(conn, &req, stream);
-    match resp {
-        Ok(ret) => ret,
-        Err(e) => e.error_response(),
-    }
-}
+// // Tip 2
+// #[get("/ws")]
+// async fn index(
+//     req: HttpRequest,
+//     stream: web::Payload
+// ) -> HttpResponse {
+//     let conn = WsConn {
+//         nick: "Langery".into()
+//     };
+//     let resp = actix_web_actors::ws::start(conn, &req, stream);
+//     match resp {
+//         Ok(ret) => ret,
+//         Err(e) => e.error_response(),
+//     }
+// }
 
 // Tip 1
-// #[get("/ws")]
-// async fn index() -> HttpResponse {
-//     HttpResponse::Ok()
-//         .body("Hello World")
-// }
+#[get("/ws")]
+async fn index() -> HttpResponse {
+    HttpResponse::Ok()
+        .body("Hello World")
+}
 
 // create app
 pub async fn create_app() {
