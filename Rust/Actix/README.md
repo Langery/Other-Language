@@ -16,3 +16,4 @@ cargo run
 
 1. 注意加载依赖；(后续总结依赖包)
 2. websocket 待学习...
+3. 一个服务可以增加多个 service
