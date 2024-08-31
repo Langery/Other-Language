@@ -11,12 +11,13 @@ async fn index_app(data: web::Data<AppState>) -> String {
 }
 
 async fn index() -> impl Responder {
-    "Hello world~"
+    "This is index page"
 }
 
 async fn demo() -> impl Responder {
     "This is demo."
 }
+
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
