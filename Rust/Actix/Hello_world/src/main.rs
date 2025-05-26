@@ -1,4 +1,6 @@
+use actix::Actor;
 use actix_web::{web, App, HttpServer, Responder, get};
+// use actix_web_actors::ws::{WebsocketContext};
 
 struct AppState {
     app_name: String
@@ -10,7 +12,7 @@ async fn index_app(data: web::Data<AppState>) -> String {
     format!("Hello {app_name} ~")
 }
 
-async fn index() -> impl Responder {
+async fn appIndex() -> impl Responder {
     "This is index page"
 }
 
@@ -25,7 +27,7 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .service(
                 web::scope("/app")
-                    .route("/index", web::get().to(index))
+                    .route("/index", web::get().to(appIndex)) // 127.0.0.1:8080/app/index
                     .route("/demo", web::get().to(demo))
             )
             // AppState
